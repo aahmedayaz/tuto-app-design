@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import ExtraText from './ExtraText';
+import Lottie from 'lottie-react'
+import animationData from '../../assets/user.json'
 
 const FormWrapper = ({heading, description, children}) => {
   return (
@@ -16,7 +18,7 @@ const FormWrapper = ({heading, description, children}) => {
                 <div className='flex justify-center items-center w-[90px] h-[90px] rounded-[50%] absolute bottom-[-45px] left-[60px] border-[1px] bg-[#ff4c4c] border-[none]'>
                     <FaGoogle className='text-[#ffffff] text-3xl'/>
                 </div>
-                <div className='flex justify-center items-center w-[90px] h-[90px] rounded-[50%] absolute bottom-[-45px] left-[190px] border-[1px] bg-[#4c5eff] border-[none]'>
+                <div className='flex justify-center items-center w-[90px] h-[90px] rounded-[50%] absolute bottom-[-45px] right-[60px] border-[1px] bg-[#4c5eff] border-[none]'>
                     <FaFacebookF className='text-[#ffffff] text-3xl'/>
                 </div>
             </div>
