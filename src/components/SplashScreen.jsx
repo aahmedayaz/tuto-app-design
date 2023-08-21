@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { FaFreeCodeCamp } from "react-icons/fa";
 import SignInSplash from './SignIn/SignInSplash';
+import logoLowerPart from '../assets/splashScreen/logo-lower-part.png'
+import logoUpperPart from '../assets/splashScreen/logo-upper-part.png'
+import tutorlaLogo from '../assets/splashScreen/tutorla-logo.png'
 
 const SplashScreen = () => {
   
@@ -10,11 +12,11 @@ const SplashScreen = () => {
   useEffect(() => {
     const firsttimeoutId = setTimeout(() => {
         setFirstSplashScreen(false)
-    }, 1300)
+    }, 800)
 
     const secondtimeoutId = setTimeout(() => {
         setSecondSplashScreen(true)
-    }, 2000)
+    }, 2500)
 
     return(() => {
         clearTimeout(firsttimeoutId)
@@ -24,14 +26,20 @@ const SplashScreen = () => {
     
   return (
     <>
-        <div className='w-full h-[100vh] bg-[#ff5050] flex justify-center items-center'>
-            {
-                secondSplashScreen ? <SignInSplash/>
-                : 
-                firstSplashScreen ? <FaFreeCodeCamp className='text-[#ffffff] text-[150px]'/>
-                :
-                <h1 className='text-[80px] text-[#ffffff]'>Tutorla !</h1>
-            }
+        <div className='w-max-[420px] h-[100vh]'>
+          <div className="w-full h-[100vh] bg-[#FF3B18] flex flex-col justify-center items-center gap-[10px]" >
+              {
+                  secondSplashScreen ? <SignInSplash/>
+                  : 
+                  firstSplashScreen ? 
+                  <>
+                    <img src={logoUpperPart} alt="upper-part" className='w-[95px]'/>
+                    <img src={logoLowerPart} alt="lower-part" className='w-[95px]'/>
+                  </>
+                  :
+                  <img src={tutorlaLogo} alt="" className='w-[280px]'/>
+              }
+          </div>
         </div>
     </>
   )
