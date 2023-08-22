@@ -10,9 +10,9 @@ import Student from '../../assets/dashboard/student-icon.png'
 const Wrapper = ({bottomNavigation, onDashboard, children }) => {
   return (
     <>
-        <div className='w-[100%] min-h-[100vh]'>
-            <div className='w-[100%] top-0 relative'>
-                <div className='w-[100%] h-[110px] flex items-center sticky px-[25px] justify-between'>
+        <div className='w-[100%] min-h-[100vh] overflow-hidden pt-[110px]'>
+            <div className='w-[100%] top-0 fixed h-full '>
+                <div className='w-[100%] h-[110px] flex items-center top-0 px-[25px] justify-between bg-[#fff]'>
                 {
                     onDashboard ? 
                     <>

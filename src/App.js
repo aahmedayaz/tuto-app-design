@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import SignUpPage from './components/Form/SignUpPage';
 import SignInPage from './components/Form/SignInPage';
-import Dashboard from './components/Dashboard/Dashboard';
+import DashboardIncomplete from './components/Dashboard/DashboardIncomplete';
+import DashboardComplete from './components/Dashboard/DashboardComplete';
 
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
         </Route>
         <Route path='/signin' element={<SignInPage/>}>
         </Route>
-        <Route path='/dashboard' element={<Dashboard/>}>
+        <Route path='/dashboard-incomplete' element={<DashboardIncomplete/>}>
+        </Route>
+        <Route path='/dashboard' element={<DashboardComplete/>}>
         </Route>
       </Routes>
     </>

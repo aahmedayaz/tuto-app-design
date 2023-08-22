@@ -8,7 +8,7 @@ import TutorRatings from '../../../assets/monthlysummary/Tutor-Rating-icon.png'
 const MonthlySummary = ({month, AttendedHours, ScheduledHours, ActiveStudents, TutorRating}) => {
   return (
     <>
-        <div className='mx-[25px] px-[25px] py-[15px] bg-[#eeededb6]'>
+        <div className='mx-[25px] px-[25px] py-[15px] bg-[#eeededb6] rounded-md mb-[15px] shadow-[1px_2px_5px_0px_rgba(0,0,0,0.75)]'>
             <h2 className='text-xl font-bold text-[#034BD9]'>Monthly Summary</h2>
             <span className='text-sm'>{month}</span>
             <div className='h-[75px] flex w-full mt-[15px]'>
